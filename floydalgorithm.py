@@ -1,5 +1,6 @@
 
 # Defining infinity as NO_PATH"
+
 INF = "NO_PATH"
 
 def floyd_recursive(graph, i, j, k):
@@ -39,7 +40,7 @@ def floyd_recursive(graph, i, j, k):
             return floyd_recursive(graph, 0, 0, k - 1) # once all rows and columns are processed, intermediate is decremented by 1 to move to the next intermediate node.
 
 
-# Input graph
+# Input graph - 4x4 matrix
 graph = [
     [0, 7, INF, 8],
     [INF, 0, 5, INF],

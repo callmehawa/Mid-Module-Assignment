@@ -17,8 +17,9 @@ def floyd_recursive(graph, i, j, k):
     matrix containing the shortest path between all pairs of nodes.
 
     """
-    # base case - source node = destinate node path distance is zero therefore return to matrix witout update
-
+    # base case - source node = destinate node path distance is zero therefore return to matrix without update
+    if k < 0:
+        return graph
     if i == j:
         return graph
     

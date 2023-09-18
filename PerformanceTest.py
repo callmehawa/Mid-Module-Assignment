@@ -47,15 +47,16 @@ def performance_test(graph):
     """
     Measure the performance of the floyd_recursive function.
 
-    param graph input is generated using random variable generator.
+    parameter graph input is generated using random variable generator.
     """
-    graph_size = len(graph)
+    graph_size = len(graph) #calculates the size of the graph based on user input
 
-    start_time = time.time()
+    start_time = time.time() #use of time modue to calculate the start time and end time further on. 
     result = floyd_recursive(graph, 0, 0, 0)
-    end_time = time.time()
+    """calling of floyd_recursive function as start of performance testing"""
+    end_time = time.time() e 
 
-    # Calculate and print the execution time
+    # Calculation of the performance time
     performance_time = end_time - start_time
     print(f"{graph_size}x{graph_size} graph execution time is: {performance_time} seconds")
 
@@ -65,7 +66,7 @@ def performance_test(graph):
 
 # Ask the user for the size of the input graph
 graph_size = int(input("Enter the size of the input graph: "))
-random.seed(0)  # Seed for reproducibility (change as needed)
-graph = [[random.randint(1, 10) if i != j else 0 for j in range(graph_size)] for i in range(graph_size)]
+random.seed(0)  
+graph = [[random.randint(1, 10) if i != j else 0 for j in range(graph_size)] for i in range(graph_size)] #generation of the random matrix
 
 performance_test(graph)

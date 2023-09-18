@@ -39,17 +39,6 @@ def floyd_recursive(graph, i, j, k):
         else:
             return floyd_recursive(graph, 0, 0, k - 1) # once all rows and columns are processed, intermediate is decremented by 1 to move to the next intermediate node.
 
-# Input graph - 4x4 matrix
-graph = [
-    [0, 7, INF, 8],
-    [INF, 0, 5, INF],
-    [INF, INF, 0, 2],
-    [INF, INF, INF, 0]
-]
-
-# Call the recursive function to compute shortest distances
-result = floyd_recursive(graph, 0, 0, 0)
-
 
 import unittest
 
